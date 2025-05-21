@@ -808,3 +808,96 @@ footer {
   font-size: 13px;
   color: #999;
 }
+
+
+
+
+  .janelaModal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    display: none;
+    align-items: start;
+    justify-content: end;
+  
+    z-index: 999;
+    background-color: #00000080;
+  }
+  
+  .modal {
+    width: 20%;
+    height: 100%;
+    min-width: 450px;
+    min-height: 200px;
+  
+  
+  }
+  
+  .janelaModal.abrir {
+    display: flex;
+ }
+
+ @keyframes abrirModal{
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, -20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+ }
+
+ .abrir .modal {
+  animation: abrirModal 1s;
+ }
+
+ /* ============================= */
+
+ .janelaModalCadastro {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    display: none;
+    align-items: start;
+    justify-content: end;
+  
+    z-index: 999;
+    background-color: #00000080;
+  }
+  
+  .modalCadastro {
+    width: 20%;
+    height: 100%;
+    min-width: 450px;
+    min-height: 200px;
+  
+    background-color: white;
+  }
+  
+  .janelaModalCadastro.abrir {
+    display: flex;
+ }
+
+ @keyframes abrirModalCadastro{
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, -20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+ }
+
+ .abrir .modalCadastro {
+  animation: abrirModal 1s;
+ }

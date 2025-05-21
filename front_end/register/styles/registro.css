@@ -7,14 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #00000049;
-    opacity: 90%;
-}
 
 .btn-default {
     background-color: #00c3ff;
@@ -48,6 +40,7 @@ body {
 #form_container {
     display: flex;
     flex-direction: column;
+
     gap: 32px;
     height: 100%;
     background-color: #f6f8ff;
@@ -81,14 +74,15 @@ body {
 
 #form {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-direction: column;
     gap: 32px;
     height: 100%;
 }
 
 #input_container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 24px;
 }
 
@@ -99,11 +93,17 @@ body {
 }
 
 .input-field {
+    width: 90%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #ffff;
     border-radius: 8px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.input-field input {
+    width: 100%;
 }
 
 .input-field i {
@@ -134,17 +134,34 @@ body {
     outline: 2px solid #00c3ff;
 }
 
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box label {
+    width: 90%;
+}
+
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px white inset !important;
     color: #000;
 }
 
 .radio-container {
-    grid-column: span 2;
+    /* grid-column: span 2; */
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-container label {
+    width: 90%;
 }
 
 #gender_inputs {
     display: flex;
+
     gap: 20px;
 }
 
@@ -176,4 +193,10 @@ input:-webkit-autofill {
     .form-control[type="date"] {
         background-color: #fff;
     }
+}
+
+.tituloCadastro {
+    width: 100%;
+    display: flex;
+    justify-content: start;
 }
