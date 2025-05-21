@@ -1,0 +1,810 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f7ff;
+  font-family: Arial, sans-serif;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #e6f2ff;
+  position: relative;
+  z-index: 100;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  height: 10%;
+  max-height: 5rem;
+}
+
+.logo-area img {
+  height: 15rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-area p {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  width: 300px;
+}
+
+.barra-pesquisa input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+  background: transparent;
+}
+
+.barra-pesquisa button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navegacao ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navegacao ul li {
+  position: relative;
+}
+
+.navegacao ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navegacao ul li a:hover {
+  color: #00c3ff;
+}
+
+/* Estilo para o menu dropdown de categorias */
+.categorias-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  display: none;
+  z-index: 100;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.categorias-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.categorias-dropdown ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.categorias-dropdown ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categorias-dropdown ul li:hover {
+  background-color: #e6f2ff;
+  color: #007bff;
+}
+
+.carrinho {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  position: relative;
+  right: 1rem;
+}
+
+.logo a{
+  text-decoration: none;
+}
+.botoes-auth {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn-login,
+.btn-register {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-login a{
+  color: #d1e7ff;
+  text-decoration: none;
+}
+.btn-login a:hover{
+  color: #000000;
+}
+/* Estilo específico para cada botão */
+.btn-login {
+  background-color: #007bff;
+  color: white;
+}
+
+
+.btn-login:hover {
+  background-color: #0056b3;
+}
+
+.btn-register {
+  background-color: #00c3ff;
+  color: white;
+}
+.btn-register a {
+ text-decoration: none;
+  color: #d1e7ff;
+}
+.btn-register:hover {
+  background-color: #009ccf;
+}
+.btn-register a:hover{
+  color: #000000;
+}
+/* Título da Loja */
+.titulo-loja {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* Título da Categoria */
+.titulo-categoria {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2.5rem;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* Tabs de Categorias */
+.categoria-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background-color: #e6f2ff;
+  border: 2px solid #007bff;
+  border-radius: 25px;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #d1e7ff;
+}
+
+.tab-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Estilos do Slider de Produtos */
+.produtos-container {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 15px;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.produto-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(20% - 16px);
+  display: flex;
+  flex-direction: column;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.produto-imagem {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.produto-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.produto-card:hover .produto-imagem img {
+  transform: scale(1.05);
+}
+
+.produto-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.produto-info h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+  height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.produto-preco {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.produto-parcela {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn-comprar {
+  margin-top: auto;
+  padding: 10px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-comprar:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para os controles do Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007bff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #007bff;
+}
+
+/* Estilos para o Slider de Esportes */
+.esportes-container {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 15px;
+  position: relative;
+}
+
+.esportes-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+}
+
+.esporte-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(25% - 15px);
+  cursor: pointer;
+  position: relative;
+}
+
+.esporte-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.esporte-imagem {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.esporte-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.esporte-card:hover .esporte-imagem img {
+  transform: scale(1.1);
+}
+
+.esporte-nome {
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+.esporte-card:hover .esporte-nome {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Posicionamento das setas de navegação fora dos cards */
+.esportesSwiper .swiper-button-next,
+.esportesSwiper .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.esportesSwiper .swiper-button-next {
+  right: 10px;
+}
+
+.esportesSwiper .swiper-button-prev {
+  left: 10px;
+}
+
+.esportesSwiper .swiper-button-next:after,
+.esportesSwiper .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Posicionamento das setas de navegação fora dos cards para outros sliders */
+.produtos-container {
+  position: relative;
+}
+
+.produtos-container .swiper-button-next {
+  right: 10px;
+}
+
+.produtos-container .swiper-button-prev {
+  left: 10px;
+}
+
+.produtos-container .swiper-button-next,
+.produtos-container .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.produtos-container .swiper-button-next:after,
+.produtos-container .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Estilos para a página de detalhes do esporte */
+.sport-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+.sport-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sport-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.sport-video {
+  flex: 1 1 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sport-video iframe {
+  display: block;
+  border-radius: 10px;
+}
+
+.sport-info {
+  flex: 1 1 400px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sport-info h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.sport-info h3 {
+  color: #00c3ff;
+  margin: 20px 0 10px;
+  font-size: 1.4rem;
+}
+
+.sport-info p {
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.sport-info ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.sport-info ul li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.sport-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-back, .btn-equipment {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back {
+  background-color: #e6f2ff;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.btn-back:hover {
+  background-color: #d1e7ff;
+}
+
+.btn-equipment {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-equipment:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para a página de detalhes da categoria */
+.category-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+.category-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.sport-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.sport-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sport-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.sport-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sport-card:hover .sport-image img {
+  transform: scale(1.1);
+}
+
+.sport-name {
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.sport-card:hover .sport-name {
+  color: #00c3ff;
+}
+
+.category-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .produto-card, .esporte-card {
+    width: calc(25% - 15px);
+  }
+  
+  .card-container, .esportes-grid {
+    justify-content: center;
+  }
+  
+  .esportesSwiper .swiper-button-next {
+    right: 0;
+  }
+  
+  .esportesSwiper .swiper-button-prev {
+    left: 0;
+  }
+  
+  .produtos-container .swiper-button-next {
+    right: 0;
+  }
+  
+  .produtos-container .swiper-button-prev {
+    left: 0;
+  }
+  
+  .sport-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 992px) {
+  .produto-card, .esporte-card {
+    width: calc(33.333% - 14px);
+  }
+  
+  .sports-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .produto-card, .esporte-card {
+    width: calc(50% - 10px);
+  }
+  
+  .cabecalho {
+    flex-wrap: wrap;
+  }
+  
+  .navegacao ul {
+    gap: 1rem;
+  }
+  
+  .categoria-tabs {
+    gap: 10px;
+  }
+  
+  .tab-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .sport-video iframe {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .produto-card, .esporte-card {
+    width: 100%;
+  }
+  
+  .navegacao ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .botoes-auth {
+    margin-top: 1rem;
+  }
+  
+  .categoria-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-btn {
+    width: 80%;
+  }
+  
+  .sport-video iframe {
+    height: 250px;
+  }
+  
+  .sports-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #999;
+}

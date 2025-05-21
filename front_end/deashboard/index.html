@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="deashboard.css">
+  <!-- Font Awesome para os ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Swiper CSS para o slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <title>Sportly</title>
+</head>
+<body>
+
+  <div class="cabecalho">
+    <div class="logo-area">
+      <ul>
+        <li>
+          <a href=""><img src="img/logo.png" alt="Sportly logo"></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="barra-pesquisa">
+      <input type="text" placeholder="Busque por Sports ">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <nav class="navegacao">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">CATEGORIAS</a></li>
+        <li><a href="#">NUTRIÇÃO</a></li>
+        <li><a href="#">PROGRESSO</a></li>
+        <li><a href="#">SUPORT</a></li>
+      </ul>
+    </nav>
+
+    <div class="botoes-auth">
+         <i class="carrinho fas fa-shopping-cart"></i>
+      <button class="btn-login">
+        <a href="../login/login.html">Login</a></button>
+      <button class="btn-register">
+        <a href="../register/registro.html">Registrar</a></button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Categorias de Esportes Slider -->
+    <div class="esportes-container">
+      <h1 class="titulo-categoria">ESPORTES DE QUADRA</h1>
+      <div class="categoria-tabs">
+        <button class="tab-btn active" data-category="quadra">Esportes de Quadra</button>
+        <button class="tab-btn" data-category="areia">Esportes de Areia</button>
+        <button class="tab-btn" data-category="agua">Esportes Aquáticos</button>
+        <button class="tab-btn" data-category="radicais">Esportes Radicais</button>
+        <button class="tab-btn" data-category="inverno">Esportes de Inverno</button>
+      </div>
+      
+      <div class="swiper esportesSwiper">
+        <div class="swiper-wrapper">
+          <!-- Esportes de Quadra -->
+          <div class="swiper-slide" data-category="quadra">
+            <div class="esportes-grid">
+              <div class="esporte-card" data-sport="Basquete">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1546519638-68e109acd27d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Basquete" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Basquete'">
+                </div>
+                <h3 class="esporte-nome">Basquete</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Vôlei">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vôlei" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Vôlei'">
+                </div>
+                <h3 class="esporte-nome">Vôlei</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Futsal">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Futsal" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Futsal'">
+                </div>
+                <h3 class="esporte-nome">Futsal</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Tênis">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tênis" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Tênis'">
+                </div>
+                <h3 class="esporte-nome">Tênis</h3>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide" data-category="quadra">
+            <div class="esportes-grid">
+              <div class="esporte-card" data-sport="Badminton">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Badminton" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Badminton'">
+                </div>
+                <h3 class="esporte-nome">Badminton</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Handebol">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Handebol" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Handebol'">
+                </div>
+                <h3 class="esporte-nome">Handebol</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Squash">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1554068865-94bdbe225589?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Squash" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Squash'">
+                </div>
+                <h3 class="esporte-nome">Squash</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Basquete 3x3">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Basquete 3x3" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Basquete+3x3'">
+                </div>
+                <h3 class="esporte-nome">Basquete 3x3</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Esportes de Areia -->
+          <div class="swiper-slide" data-category="areia">
+            <div class="esportes-grid">
+              <div class="esporte-card" data-sport="Vôlei de Praia">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vôlei de Praia" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Vôlei+de+Praia'">
+                </div>
+                <h3 class="esporte-nome">Vôlei de Praia</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Futevôlei">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Futevôlei" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Futevôlei'">
+                </div>
+                <h3 class="esporte-nome">Futevôlei</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Beach Tennis">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1562552052-c72ceddf93dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Beach Tennis" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Beach+Tennis'">
+                </div>
+                <h3 class="esporte-nome">Beach Tennis</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Frescobol">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Frescobol" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Frescobol'">
+                </div>
+                <h3 class="esporte-nome">Frescobol</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Esportes Aquáticos -->
+          <div class="swiper-slide" data-category="agua">
+            <div class="esportes-grid">
+              <div class="esporte-card" data-sport="Natação">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Natação" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Natação'">
+                </div>
+                <h3 class="esporte-nome">Natação</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Surf">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Surf" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Surf'">
+                </div>
+                <h3 class="esporte-nome">Surf</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Stand Up Paddle">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1526188717906-ab4a2f949f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Stand Up Paddle" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Stand+Up+Paddle'">
+                </div>
+                <h3 class="esporte-nome">Stand Up Paddle</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Canoagem">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1511124441463-b6fe5b63b617?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Canoagem" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Canoagem'">
+                </div>
+                <h3 class="esporte-nome">Canoagem</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Esportes Radicais -->
+          <div class="swiper-slide" data-category="radicais">
+            <div class="esportes-grid">
+              <div class="esporte-card" data-sport="Skate">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Skate" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Skate'">
+                </div>
+                <h3 class="esporte-nome">Skate</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="BMX">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="BMX" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=BMX'">
+                </div>
+                <h3 class="esporte-nome">BMX</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Parkour">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1566796195789-d5a59f97235a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Parkour" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Parkour'">
+                </div>
+                <h3 class="esporte-nome">Parkour</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Escalada">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Escalada" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Escalada'">
+                </div>
+                <h3 class="esporte-nome">Escalada</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Esportes de Inverno -->
+          <div class="swiper-slide" data-category="inverno">
+            <div class="esportes-grid">
+              <div class="esporte-card" data-sport="Esqui">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Esqui" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Esqui'">
+                </div>
+                <h3 class="esporte-nome">Esqui</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Snowboard">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1611124600582-c9ef1d538e03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Snowboard" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Snowboard'">
+                </div>
+                <h3 class="esporte-nome">Snowboard</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Patinação no Gelo">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1547446931-3eb679406c3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Patinação no Gelo" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Patinação+no+Gelo'">
+                </div>
+                <h3 class="esporte-nome">Patinação no Gelo</h3>
+              </div>
+              
+              <div class="esporte-card" data-sport="Hóquei no Gelo">
+                <div class="esporte-imagem">
+                  <img src="https://images.unsplash.com/photo-1580748141549-71748dbe0bdc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Hóquei no Gelo" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Hóquei+no+Gelo'">
+                </div>
+                <h3 class="esporte-nome">Hóquei no Gelo</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Título da Loja -->
+    <h1 class="titulo-loja">Loja de Equipamentos</h1>
+
+    <!-- Slider de Produtos -->
+    <div class="produtos-container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="card-container">
+              <!-- Card 1 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Console PlayStation 5" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=PlayStation+5'">
+                </div>
+                <div class="produto-info">
+                  <h3>Console PlayStation 5 Slim</h3>
+                  <p class="produto-preco">R$ 3.533,07</p>
+                  <p class="produto-parcela">10x de R$ 379,90 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 2 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1527219525722-f9767a7f2884?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Monitor Gamer" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Monitor+Gamer'">
+                </div>
+                <div class="produto-info">
+                  <h3>Monitor Gamer Curvo LG UltraGear</h3>
+                  <p class="produto-preco">R$ 1.899,99</p>
+                  <p class="produto-parcela">10x de R$ 211,11 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 3 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Processador AMD Ryzen" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=AMD+Ryzen'">
+                </div>
+                <div class="produto-info">
+                  <h3>Processador AMD Ryzen 7 5700X3D</h3>
+                  <p class="produto-preco">R$ 1.649,99</p>
+                  <p class="produto-parcela">10x de R$ 183,33 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 4 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Notebook Gamer" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Notebook+Gamer'">
+                </div>
+                <div class="produto-info">
+                  <h3>Notebook Gamer Acer Nitro V15</h3>
+                  <p class="produto-preco">R$ 4.699,00</p>
+                  <p class="produto-parcela">10x de R$ 522,11 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 5 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1612444530582-fc66183b16f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Headset Gamer" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Headset+Gamer'">
+                </div>
+                <div class="produto-info">
+                  <h3>Headset Gamer Havit</h3>
+                  <p class="produto-preco">R$ 169,99</p>
+                  <p class="produto-parcela">7x de R$ 28,57 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="card-container">
+              <!-- Card 6 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mouse Gamer" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Mouse+Gamer'">
+                </div>
+                <div class="produto-info">
+                  <h3>Mouse Gamer RGB</h3>
+                  <p class="produto-preco">R$ 129,99</p>
+                  <p class="produto-parcela">5x de R$ 25,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 7 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Teclado Mecânico" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Teclado+Mecânico'">
+                </div>
+                <div class="produto-info">
+                  <h3>Teclado Mecânico RGB</h3>
+                  <p class="produto-preco">R$ 249,99</p>
+                  <p class="produto-parcela">10x de R$ 24,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 8 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1606318801954-d46d46d3360a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cadeira Gamer" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Cadeira+Gamer'">
+                </div>
+                <div class="produto-info">
+                  <h3>Cadeira Gamer Ergonômica</h3>
+                  <p class="produto-preco">R$ 899,99</p>
+                  <p class="produto-parcela">10x de R$ 89,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 9 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Placa de Vídeo" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Placa+de+Vídeo'">
+                </div>
+                <div class="produto-info">
+                  <h3>Placa de Vídeo RTX 4070</h3>
+                  <p class="produto-preco">R$ 3.999,99</p>
+                  <p class="produto-parcela">10x de R$ 399,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 10 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1631281956016-3cdc1b2fe5fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Gabinete Gamer" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Gabinete+Gamer'">
+                </div>
+                <div class="produto-info">
+                  <h3>Gabinete Gamer RGB</h3>
+                  <p class="produto-preco">R$ 349,99</p>
+                  <p class="produto-parcela">10x de R$ 34,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+   <!-- Título da Loja -->
+    <h1 class="titulo-loja">Suplementos Nutricionais</h1>
+
+    <!-- Slider de Produtos -->
+    <div class="produtos-container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="card-container">
+              <!-- Card 1 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1579722821273-0f6c1b5d0b51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Whey Protein" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Whey+Protein'">
+                </div>
+                <div class="produto-info">
+                  <h3>Whey Protein Isolado Growth</h3>
+                  <p class="produto-preco">R$ 149,90</p>
+                  <p class="produto-parcela">3x de R$ 49,97 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 2 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1586401877159-a14d06afa3f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Creatina" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Creatina'">
+                </div>
+                <div class="produto-info">
+                  <h3>Creatina Monohidratada Integral Medica</h3>
+                  <p class="produto-preco">R$ 89,90</p>
+                  <p class="produto-parcela">2x de R$ 44,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 3 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="BCAA" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=BCAA'">
+                </div>
+                <div class="produto-info">
+                  <h3>BCAA 2:1:1 Max Titanium</h3>
+                  <p class="produto-preco">R$ 69,90</p>
+                  <p class="produto-parcela">2x de R$ 34,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 4 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Pré-Treino" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Pré-Treino'">
+                </div>
+                <div class="produto-info">
+                  <h3>Pré-Treino C4 Cellucor</h3>
+                  <p class="produto-preco">R$ 129,90</p>
+                  <p class="produto-parcela">3x de R$ 43,30 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 5 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1610725664285-7c57e6eeac3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Multivitamínico" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Multivitamínico'">
+                </div>
+                <div class="produto-info">
+                  <h3>Multivitamínico Daily Formula Universal</h3>
+                  <p class="produto-preco">R$ 79,90</p>
+                  <p class="produto-parcela">2x de R$ 39,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="card-container">
+              <!-- Card 6 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Glutamina" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Glutamina'">
+                </div>
+                <div class="produto-info">
+                  <h3>Glutamina Isolada Probiótica</h3>
+                  <p class="produto-preco">R$ 59,90</p>
+                  <p class="produto-parcela">2x de R$ 29,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 7 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Albumina" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Albumina'">
+                </div>
+                <div class="produto-info">
+                  <h3>Albumina Desidratada Naturovos</h3>
+                  <p class="produto-preco">R$ 49,90</p>
+                  <p class="produto-parcela">2x de R$ 24,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 8 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1606889464198-fcb18894cf50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Hipercalórico" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Hipercalórico'">
+                </div>
+                <div class="produto-info">
+                  <h3>Hipercalórico Mass Titanium</h3>
+                  <p class="produto-preco">R$ 119,90</p>
+                  <p class="produto-parcela">3x de R$ 39,97 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 9 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1624454002302-52288334e6af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Colágeno" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Colágeno'">
+                </div>
+                <div class="produto-info">
+                  <h3>Colágeno Hidrolisado Sanavita</h3>
+                  <p class="produto-preco">R$ 69,90</p>
+                  <p class="produto-parcela">2x de R$ 34,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 10 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1624454002302-52288334e6af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Termogênico" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Termogênico'">
+                </div>
+                <div class="produto-info">
+                  <h3>Termogênico Black Skull</h3>
+                  <p class="produto-preco">R$ 99,90</p>
+                  <p class="produto-parcela">3x de R$ 33,30 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Título da Loja -->
+    <h1 class="titulo-loja">Produtos Esportivos</h1>
+
+    <!-- Slider de Produtos Esportivos -->
+    <div class="produtos-container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="card-container">
+              <!-- Card 1 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tênis de Corrida" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Tênis+de+Corrida'">
+                </div>
+                <div class="produto-info">
+                  <h3>Tênis de Corrida Nike Air Zoom</h3>
+                  <p class="produto-preco">R$ 599,90</p>
+                  <p class="produto-parcela">10x de R$ 59,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 2 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bola de Futebol" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Bola+de+Futebol'">
+                </div>
+                <div class="produto-info">
+                  <h3>Bola de Futebol Adidas Champions League</h3>
+                  <p class="produto-preco">R$ 249,90</p>
+                  <p class="produto-parcela">5x de R$ 49,98 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 3 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Raquete de Tênis" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Raquete+de+Tênis'">
+                </div>
+                <div class="produto-info">
+                  <h3>Raquete de Tênis Wilson Pro Staff</h3>
+                  <p class="produto-preco">R$ 1.299,90</p>
+                  <p class="produto-parcela">10x de R$ 129,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 4 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Luvas de Boxe" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Luvas+de+Boxe'">
+                </div>
+                <div class="produto-info">
+                  <h3>Luvas de Boxe Everlast Pro Style</h3>
+                  <p class="produto-preco">R$ 189,90</p>
+                  <p class="produto-parcela">3x de R$ 63,30 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 5 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bicicleta" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Bicicleta'">
+                </div>
+                <div class="produto-info">
+                  <h3>Bicicleta Mountain Bike Caloi Elite</h3>
+                  <p class="produto-preco">R$ 3.499,90</p>
+                  <p class="produto-parcela">10x de R$ 349,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="card-container">
+              <!-- Card 6 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1517344884509-a0c97ec11bcc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Prancha de Surf" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Prancha+de+Surf'">
+                </div>
+                <div class="produto-info">
+                  <h3>Prancha de Surf Mormaii Evolution</h3>
+                  <p class="produto-preco">R$ 1.899,90</p>
+                  <p class="produto-parcela">10x de R$ 189,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 7 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1515772255001-7b676f4d3da2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kimono Judô" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Kimono+Judô'">
+                </div>
+                <div class="produto-info">
+                  <h3>Kimono Judô Atama Classic</h3>
+                  <p class="produto-preco">R$ 349,90</p>
+                  <p class="produto-parcela">7x de R$ 49,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 8 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Skate" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Skate'">
+                </div>
+                <div class="produto-info">
+                  <h3>Skate Completo Profissional Element</h3>
+                  <p class="produto-preco">R$ 499,90</p>
+                  <p class="produto-parcela">10x de R$ 49,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 9 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1434596922112-19c563067271?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Raquete de Badminton" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Raquete+de+Badminton'">
+                </div>
+                <div class="produto-info">
+                  <h3>Raquete de Badminton Yonex Astrox</h3>
+                  <p class="produto-preco">R$ 799,90</p>
+                  <p class="produto-parcela">10x de R$ 79,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 10 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Patins" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Patins'">
+                </div>
+                <div class="produto-info">
+                  <h3>Patins Inline Oxer Freestyle</h3>
+                  <p class="produto-preco">R$ 399,90</p>
+                  <p class="produto-parcela">8x de R$ 49,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Título da Loja -->
+    <h1 class="titulo-loja">Acessórios Esportivos</h1>
+
+    <!-- Slider de Produtos -->
+    <div class="produtos-container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="card-container">
+              <!-- Card 1 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1576243345690-4e4b79b63288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Relógio Esportivo" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Relógio+Esportivo'">
+                </div>
+                <div class="produto-info">
+                  <h3>Relógio Esportivo Garmin Forerunner</h3>
+                  <p class="produto-preco">R$ 1.299,90</p>
+                  <p class="produto-parcela">10x de R$ 129,99 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 2 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mochila Esportiva" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Mochila+Esportiva'">
+                </div>
+                <div class="produto-info">
+                  <h3>Mochila Esportiva Under Armour</h3>
+                  <p class="produto-preco">R$ 249,90</p>
+                  <p class="produto-parcela">5x de R$ 49,98 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 3 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Fone Bluetooth" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Fone+Bluetooth'">
+                </div>
+                <div class="produto-info">
+                  <h3>Fone Bluetooth JBL Endurance</h3>
+                  <p class="produto-preco">R$ 199,90</p>
+                  <p class="produto-parcela">4x de R$ 49,98 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 4 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Luvas de Treino" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Luvas+de+Treino'">
+                </div>
+                <div class="produto-info">
+                  <h3>Luvas de Treino Adidas</h3>
+                  <p class="produto-preco">R$ 89,90</p>
+                  <p class="produto-parcela">2x de R$ 44,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 5 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Garrafa Térmica" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Garrafa+Térmica'">
+                </div>
+                <div class="produto-info">
+                  <h3>Garrafa Térmica Stanley</h3>
+                  <p class="produto-preco">R$ 149,90</p>
+                  <p class="produto-parcela">3x de R$ 49,97 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="card-container">
+              <!-- Card 6 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Corda de Pular" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Corda+de+Pular'">
+                </div>
+                <div class="produto-info">
+                  <h3>Corda de Pular Profissional</h3>
+                  <p class="produto-preco">R$ 59,90</p>
+                  <p class="produto-parcela">2x de R$ 29,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 7 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Toalha Esportiva" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Toalha+Esportiva'">
+                </div>
+                <div class="produto-info">
+                  <h3>Toalha Esportiva Microfibra</h3>
+                  <p class="produto-preco">R$ 39,90</p>
+                  <p class="produto-parcela">1x de R$ 39,90 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 8 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Joelheira" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Joelheira'">
+                </div>
+                <div class="produto-info">
+                  <h3>Joelheira Elástica Compressão</h3>
+                  <p class="produto-preco">R$ 79,90</p>
+                  <p class="produto-parcela">2x de R$ 39,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 9 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bolsa Térmica" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Bolsa+Térmica'">
+                </div>
+                <div class="produto-info">
+                  <h3>Bolsa Térmica para Alimentos</h3>
+                  <p class="produto-preco">R$ 99,90</p>
+                  <p class="produto-parcela">2x de R$ 49,95 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+              
+              <!-- Card 10 -->
+              <div class="produto-card">
+                <div class="produto-imagem">
+                  <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Porta Suplementos" crossorigin="anonymous" onerror="this.src='https://placehold.co/300x300/e6f2ff/007bff?text=Porta+Suplementos'">
+                </div>
+                <div class="produto-info">
+                  <h3>Porta Suplementos Compartimentos</h3>
+                  <p class="produto-preco">R$ 49,90</p>
+                  <p class="produto-parcela">1x de R$ 49,90 sem juros</p>
+                  <button class="btn-comprar">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Sportly</h3>
+        <p>Tecnologia, preço baixo e confiança.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Redes Sociais</h3>
+        <div class="social-icons">
+          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Atendimento</h3>
+        <p><a href="#">Fale Conosco</a></p>
+        <p><a href="#">Política de Privacidade</a></p>
+        <p><a href="#">SUPORTE 24 HORAS</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Sportly. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Script do Slider -->
+  <script src="slider.js"></script>
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
